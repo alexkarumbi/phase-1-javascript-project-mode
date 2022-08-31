@@ -2,25 +2,25 @@
     "Quotes": [
       {
         "id": 1,
-        "Quote": "Woody",
-        "Author": "",
-        "Shared BY":"",
+        "Quote": "Happiness quite unshared can scarcely be called happiness'then it has no taste.",
+        "Author": "Charlotte Bronte",
+        "Shared BY":"Amira",
         "likes": 0,
         "Dislikes":0
       },
       {
         "id": 2,
-        "Quote": "Woody",
-        "Author": "",
-        "Shared BY":"",
+        "Quote": "Work hard till money buys you happiness",
+        "Author": "Karumbi",
+        "Shared BY":"Muthambuku",
         "likes": 0,
         "Dislikes":0
       },
       {
         "id": 3,
-        "Quote": "Woody",
-        "Author": "",
-        "Shared BY":"",
+        "Quote": "Always win",
+        "Author": "Grievin",
+        "Shared BY":"Karumbi",
         "likes": 0,
         "Dislikes":0
       }
