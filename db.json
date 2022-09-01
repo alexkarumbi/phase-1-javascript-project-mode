@@ -1,29 +1,28 @@
 {
-    "quotes": [
-      {
-        "id": 1,
-        "Quote": "Happiness quite unshared can scarcely be called happiness'then it has no taste.",
-        "author": "Charlotte Bronte",
-        "sharedBy":"Amira",
-        "likes": 0,
-        "Dislikes":0
-      },
-      {
-        "id": 2,
-        "Quote": "Work hard till money buys you happiness",
-        "author": "Karumbi",
-        "sharedBy":"Muthambuku",
-        "likes": 0,
-        "Dislikes":0
-      },
-      {
-        "id": 3,
-        "Quote": "Always win",
-        "author": "Grievin",
-        "sharedBy":"Karumbi",
-        "likes": 0,
-        "Dislikes":0
-      }
-     
-    ]
-  }
+  "quotes": [
+    {
+      "id": 1,
+      "Quote": "Happiness quite unshared can scarcely be called happiness'then it has no taste.",
+      "author": "Charlotte Bronte",
+      "sharedBy": "Amira",
+      "likes": 0,
+      "Dislikes": 0
+    },
+    {
+      "id": 2,
+      "Quote": "Work hard till money buys you happiness",
+      "author": "Karumbi",
+      "sharedBy": "Muthambuku",
+      "likes": 0,
+      "Dislikes": 0
+    },
+    {
+      "id": 3,
+      "Quote": "Always win",
+      "author": "Grievin",
+      "sharedBy": "Karumbi",
+      "likes": 0,
+      "Dislikes": 0
+    }
+  ]
+}
