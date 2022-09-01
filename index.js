@@ -1,8 +1,15 @@
 let objGlobal;
-const output=document.querySelector("#quotes-container");
-const ul=document.querySelector("#quotes-ul");
-const authorDisplay =document.querySelector("#author");
-output.append(ul);
+const quotesOutput=document.querySelector("#quotes-container");
+const authorDisplay =document.querySelector("#author-container");
+const sharedBy=document.querySelector("#sharedby");
+const likesDisplay=document.querySelector("#likes");
+const dislikesDisplay=document.querySelector("#dislikes");
+const addLike =document.querySelector("#like-btn");
+const addDislike =document.querySelector("#dislike-btn");
+const addQuote=document.querySelector("#addquote-btn")
+
+
+
 
 const url="http://localhost:3000/quotes";
 
@@ -23,28 +30,33 @@ fetch(url)
 function renderList(characterObj){
 
     characterObj.forEach(element => {
-        console.log(element);
+        // console.log(element);
+
         const li =document.createElement("li");
         li.textContent=element.Quote;
-        ul.append(li);
+        quotesOutput.append(li);
+
         
-        const li2 = document.createElement("li2");
-        li2.textContent = element.author;
-        ul.append("Written by: ")
-        ul.append(li2);
-
-        const li3 = document.createElement("li3");
-        li3.textContent = element.sharedBy;
-        ul.append("Shared by: ")
-        ul.append(li3);
-
-        ul.append(url ="phase-1-javascript-project-mode/assets/like.png")
-
-
+        authorDisplay.textContent=element.author;
+        likesDisplay.textContent=element.likes;
+        dislikesDisplay.textContent=element.Dislikes;
+       
+        objGlobal =characterObj;
+        
     })
 }
+     addLike.addEventListener("click",(event)=>{
+    let counter = 0;
+    counter =counter +1;
+     
+    likesDisplay.textContent=counter;
+    patchRequest(objGlobal)  
+    })
+    addDislike.addEventListener("click",(event)=>{
+        let counter = 0;
+        counter =counter +1;
+        dislikesDisplay.textContent=counter;
+        patchRequest(objGlobal)  
+        })
+    
 
-/*function renderQuoteDetails(characterObj){
-    authorDisplay.textContent=characterObj.author;
-    objGlobal =characterObj;
-}*/
