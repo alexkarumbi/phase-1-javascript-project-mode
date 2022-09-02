@@ -1,3 +1,34 @@
+# Quotes
+
+This project was generated with vanilla javascript,html and css
+
+## Description
+{This is a website which I have been able to design on my own ability .It is a website for Quotes,which gives you the ability to seee quotes which have been posted by other people.
+It also allows you to upvote on them and downvote on them.A user can also add his own quote.}
+
+## By
+* Alex Karumbi Muhia
+
+## Setup/Installation Requirements
+Make sure your device has internet connectivity
+Clone the repository using the following link https://github.com/alexkarumbi/phase-1-javascript-project-mode
+Open you browser
+Browse through the website
+## Known Bugs
+{There are no known bugs}
+
+## Technologies used
+* HTML
+* CSS
+* Bootstrap
+* Javascript
+## Support and Contact deatials
+{Contact me through:alex.muhia@student.moringaschool.com}
+
+## License
+{[MIT License] Copyright@2021 Alex Karumbi}
+
+
 # Phase 1 Project Guidelines
 
 ## Learning Goals

@@ -13,7 +13,8 @@ const addQuote=document.querySelector("#form-btn");
 const votesDisplay=document.querySelector("#votes-container");
 const newQuote=document.querySelector("#Quote");
 const newAuthor=document.querySelector("#author");
-const newLikes=
+const newLikes=document.querySelector("#likes");
+const newDislikes=document.querySelector("#Dislikes")
 
 
 
@@ -40,9 +41,6 @@ function renderList(characterObj){
     characterObj.forEach(element => {
 
 
-        
-        // console.log(element);
-
         const li =document.createElement("li");
         li.textContent=element.Quote;
         quotesOutput.append(li);
@@ -59,11 +57,7 @@ function renderList(characterObj){
        dislikesDisplay.textContent=element.Dislikes;
 
 
-        
-
-     
-
-       /* const li3 =document.createElement("li3");
+       const li3 =document.createElement("li3");
         li3.textContent=element.likes;
         quotesOutput.append(addLike);
         //quotesOutput.append(li3);
@@ -74,7 +68,7 @@ function renderList(characterObj){
         li4.textContent=element.Dislikes;
         quotesOutput.append(addDislike);
         //quotesOutput.append(li4);
-*/
+
 
        
        
@@ -111,7 +105,9 @@ function renderList(characterObj){
             body:JSON.stringify({
                 "Quote":(newQuote).value,
                 "author":(newAuthor).value,
-                
+                "likes":(newLikes).value,
+                "Dislikes":(newDislikes).value
+
             }),
         })
         .then(response =>response.json())
