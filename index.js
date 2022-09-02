@@ -1,3 +1,5 @@
+
+
 let objGlobal;
 let counter =0;
 const quotesOutput=document.querySelector("#quotes-container");
@@ -7,7 +9,12 @@ const likesDisplay=document.querySelector("#likes");
 const dislikesDisplay=document.querySelector("#dislikes");
 const addLike =document.querySelector("#like-btn");
 const addDislike =document.querySelector("#dislike-btn");
-const addQuote=document.querySelector("#addquote-btn");
+const addQuote=document.querySelector("#form-btn");
+const votesDisplay=document.querySelector("#votes-container");
+const newQuote=document.querySelector("#Quote");
+const newAuthor=document.querySelector("#author");
+const newLikes=
+
 
 
 
@@ -31,19 +38,45 @@ fetch(url)
 function renderList(characterObj){
 
     characterObj.forEach(element => {
+
+
+        
         // console.log(element);
 
         const li =document.createElement("li");
         li.textContent=element.Quote;
         quotesOutput.append(li);
+    
 
-        const li2 =document.createElement("li2");
-        li2.textContent=element.author
-        authorDisplay.append(li2);
+       const span =document.createElement("span");
+        span.textContent=element.author;
+        quotesOutput.append("Written By: ");
+        quotesOutput.append(span ) ;
 
 
-        likesDisplay.textContent=element.likes;
-        dislikesDisplay.textContent=element.Dislikes;
+
+       likesDisplay.textContent=element.likes;
+       dislikesDisplay.textContent=element.Dislikes;
+
+
+        
+
+     
+
+       /* const li3 =document.createElement("li3");
+        li3.textContent=element.likes;
+        quotesOutput.append(addLike);
+        //quotesOutput.append(li3);
+
+
+
+        const li4 =document.createElement("li4");
+        li4.textContent=element.Dislikes;
+        quotesOutput.append(addDislike);
+        //quotesOutput.append(li4);
+*/
+
+       
        
         objGlobal =characterObj;
         
@@ -62,23 +95,28 @@ function renderList(characterObj){
         patchRequest(objGlobal)  
         })
     
-    const form =document.getElementById("quote-form");
+    const formEl =document.querySelector("form");
 
-    form.addEventListener("submit",function(e){
-        e.preventDefault();
-
-        const prePayload =new FormData(form);
-        const payload =new URLSearchParams(prePayload);
-
-        console.log([...payload]);
-
-        fetch("http://localhost:3000/quotes",{
-            method: "POST",
-            body:payload,
+      addQuote.addEventListener("click",(event)=>{
+        event.preventDefault();
+        console.log("zmv,jh");
+        
+        
+    
+        fetch(url,{
+            method: 'POST',
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify({
+                "Quote":(newQuote).value,
+                "author":(newAuthor).value,
+                
+            }),
         })
         .then(response =>response.json())
-        .then(data =>console.log(data))
+        .then(data =>console.log("Successful",data))
         .catch(error =>console.error(error))
-        patchRequest(objGlobal)  
-    })
-
+     }
+     )
+   

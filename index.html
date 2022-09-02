@@ -14,9 +14,11 @@
     </div>
     <h2 style="text-align: center;">Find some Quotes here</h2>
     <div id="quotes-container" >
-        
-       <h3>Written By: <p id="author-container" > </p>
-       </h3> 
+        <div id="author-container" style="display: flex; ">
+         
+
+        </div>
+      
         <p id="sharedby">
 
         </p>
@@ -34,18 +36,17 @@
     <div class="form-container">
         <form action="" method="post" id="quote-form" >
             <label for="Quote">Quote: </label>
-            <input type="text" id="quote" required>
+            <input type="text" id="Quote" >
             <label for="Author">Author</label >
-            <input type="text"id ="author" required>
-            <label for="sharedby">Shared BY:</label>
-            <input type="text"id="sharedBy" required>
+            <input type="text"id ="author" >
+            
             <label for="Likes">Likes:</label>
-            <input type="text"id="likes" required>
+            <input type="number"id="likes" >
             <label for="Dislikes">Dislikes:</label>
-            <input type="text"id="dislikes" required>
+            <input type="number"id="Dislikes" >
 
 
-            <button id="addquote-btn"  type="submit">Add Quote</button>
+            <button id="form-btn" type="submit">Add Quote</button>
         </form>
     </div>
    
